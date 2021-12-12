@@ -15,6 +15,7 @@
 * Above command will create a superuser with username ***su@gmail.com*** and password ***1234***. Change the password in command line if needed.
 * Hit http://localhost:3000 for accessing the UI and login as ***su***. If raise error try reloading the page.
 * Create Employees and Restaurants. Remember adding an Employee and Restaurant will automatically create an user in the system. **Email** field of Employee and Restaurant will be auto considered as username.
+* Login as a Restaurant for uploading menu and login as employee for voting.
 * Employee User can only see the menu uploaded by restaurants for current date and can also se the current dates winner when the voting is done. Employee User can vote for only one menu for current date. If no menu uploaded employee can't vote.
 * Restaurant user can only upload menu for current date and can see current date winner.
 * Su user can add employee and restaurant. Su user process the current date winner.
@@ -25,7 +26,7 @@ As said earlier this is a very simple project made in 2 day effort. There are lo
 For example:
 * Event driven MSA(micro service architecture) for handling user vote event for a menu
 * Django user model for user handling and more beautiful way to handle JWT
-* More tests
+* Automated Tests
 * More automated
 * More UI (Though I am not very good at making pixel perfect UI, but with time I can make better)
 
