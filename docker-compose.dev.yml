@@ -1,0 +1,53 @@
+version: "2.1"
+
+services:
+  backend:
+    stdin_open: true
+    build: ./LPS
+    environment:
+      - DATABASE_HOSTNAME=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_PASSWORD=1234
+      - DATABASE_NAME=lps_db
+      - DATABASE_USERNAME=postgres
+      - SECRET_KEY=django-insecure-gk0vii8!9eh-2stf8prtju)#x#^$$lo$$%9_s1won4y^sw%6sumw
+      - ALGORITHM=HS256
+      - JWT_EXPIRE_MINUTES=30
+    volumes:
+      - ./LPS:/app/backend
+    ports:
+      - 9000:8000
+    restart: on-failure
+    depends_on:
+      postgres:
+        condition: service_healthy
+    links:
+      - postgres
+
+  postgres:
+    image: postgres:14
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=lps_db
+    volumes:
+      - ./postgres-db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432/tcp
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+  lps_frontend:
+    build: ./frontend
+#    command: ["npm", "start"]
+    volumes:
+      - ./frontend:/app/frontend
+    ports:
+      - 3000:3000
+    restart: on-failure
+    depends_on:
+      - backend

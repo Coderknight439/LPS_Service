@@ -1,0 +1,114 @@
+@import "~antd/dist/antd.css";
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ant-menu-submenu-arrow {
+  color: white;
+}
+
+.ant-menu-submenu,
+.ant-menu-item,
+.ant-menu-submenu-inline {
+  color: white;
+}
+
+.ant-menu-item a {
+  color: white;
+}
+
+.ant-menu-title-content:hover {
+  color: #00f0ff;
+}
+
+.ant-menu-title-content a:hover {
+  color: #00f0ff;
+}
+
+.ant-menu-sub.ant-menu-inline {
+  background: #031c2f;
+  color: white;
+}
+.ant-menu-item-selected {
+  background-color: #031c2f !important;
+}
+/* .ant-layout {
+  background: rgb(4, 20, 35);
+} */
+
+.ant-table {
+  /*background: rgb(0, 14, 23);*/
+  border: rgb(5, 23, 40) 1px solid !important;
+}
+
+/*.ant-table th {*/
+  /*background: rgb(6, 42, 58) !important;*/
+/*}*/
+/*.ant-table-cell .ant-checkbox-wrapper .ant-checkbox .ant-checkbox-inner {*/
+  /*background: rgb(0, 14, 23) !important;*/
+/*}*/
+
+.ant-table-tbody tr td {
+  color: rgb(114, 164, 191);
+}
+.ant-table-thead th {
+  color: rgb(114, 164, 191) !important;
+  font-weight: bold !important;
+}
+.ant-pagination-item-link {
+  /*background: #031c2f !important;*/
+  border: none !important;
+  transition: none !important;
+}
+.ant-pagination-item-link .anticon {
+  color: rgb(100, 144, 172) !important ;
+}
+.ant-pagination-item {
+  /*background: #031c2f !important;*/
+  border: none !important;
+  transition: none !important;
+  color: rgb(100, 144, 172) !important ;
+}
+.ant-pagination-item:hover {
+  border: 1px solid rgb(100, 144, 172) !important;
+}
+
+.list-header-add-button {
+  border: 1px solid rgb(125, 85, 39) !important;
+  /*background: rgb(22, 37, 40) !important;*/
+  color: rgb(125, 85, 39) !important;
+  font-weight: bold;
+}
+.add-form-container{
+    border: 1px solid #031c2f;
+    padding: 15px 5px 5px 10px
+}
