@@ -30,7 +30,7 @@ class App extends Component {
         <Router>
           <Switch>
               <Route exact path="/" component={ Login } />
-              {store.getState().auth.isAuthenticated?<BaseLayout />:<Redirect to={Login}/>}
+              <BaseLayout />
             </Switch>
           </Router>
         </Provider>
